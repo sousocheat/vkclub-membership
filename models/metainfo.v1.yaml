@@ -1,0 +1,9 @@
+title: metaInfo
+type: object
+properties:
+  location:
+    type: string
+  deviceModel:
+    type: string
+  os:
+    type: string

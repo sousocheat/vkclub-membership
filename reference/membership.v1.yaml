@@ -5,6 +5,51 @@ info:
   description: ''
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+paths:
+  /memberships:
+    post:
+      summary: Create a new membership account
+      tags: []
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registrationID:
+                    type: string
+                  status:
+                    type: string
+              examples:
+                example-success:
+                  value:
+                    registrationID: '00001'
+                    status: PENDING
+      operationId: post-memberships
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cardType:
+                  type: string
+                  enum:
+                    - Passport
+                    - NationalID
+                cardNumber:
+                  type: string
+                uid:
+                  type: string
+                metaInfo:
+                  $ref: ../models/metainfo.v1.yaml
+              required:
+                - cardType
+                - cardNumber
+                - uid
+                - metaInfo
 components:
   schemas: {}
