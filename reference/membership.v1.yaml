@@ -66,12 +66,16 @@ paths:
                   type: string
                 os:
                   type: string
+                selfieImage:
+                  type: string
+                  format: binary
               required:
                 - cardType
                 - cardNumber
                 - uid
                 - frontImage
                 - backImage
+                - selfieImage
       parameters: []
     get:
       summary: Retrieve Membership Data By ID
@@ -125,8 +129,96 @@ paths:
       tags:
         - developer
     parameters: []
+  /memberships/pin/verifications:
+    post:
+      summary: Verify Membership PIN Code.
+      tags:
+        - developer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                required:
+                  - accessToken
+      operationId: post-memberships-pin-verifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                membershipID:
+                  type: string
+                pinCode:
+                  type: string
+                uid:
+                  type: string
+                deviceToken:
+                  type: string
+                metaInfo:
+                  $ref: '#/components/schemas/MetaInfo'
+              required:
+                - membershipID
+                - pinCode
+                - uid
+                - deviceToken
+                - metaInfo
+  /memberships/pin:
+    post:
+      summary: Update Membership PIN Code with the old PIN.
+      tags:
+        - developer
+      responses: {}
+      operationId: post-memberships-pin
+  /memberships/transactions:
+    get:
+      summary: Get a list of transactions of a membership account.
+      tags:
+        - developer
+      responses: {}
+      operationId: get-memberships-transactions
+  /memberships/registrations/info:
+    get:
+      summary: Get registration info by registrationID
+      tags:
+        - developer
+      responses: {}
+      operationId: get-memberships-registrations-info
+  /payments/orders:
+    get:
+      summary: Get order info with orderID.
+      tags:
+        - developer
+      responses: {}
+      operationId: get-payments-orders
+  /memberships/pin/reset:
+    post:
+      summary: Reset PIN.
+      tags:
+        - developer
+      responses: {}
+      operationId: post-memberships-pin-reset
 components:
-  schemas: {}
+  schemas:
+    MetaInfo:
+      title: MetaInfo
+      type: object
+      x-tags:
+        - developer
+      properties:
+        location:
+          type: string
+        deviceModel:
+          type: string
+        os:
+          type: string
+      description: "User's data used for analytics purpose."
   securitySchemes:
     accessToken:
       type: http
