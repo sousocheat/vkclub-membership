@@ -173,7 +173,7 @@ paths:
       description: Verify Membership PIN Code for connection and payment.
   /memberships/pin:
     post:
-      summary: Update Membership PIN Code with the old PIN.
+      summary: Update Membership PIN Code
       tags:
         - developer
       responses:
@@ -217,6 +217,8 @@ paths:
       responses: {}
       operationId: get-memberships-transactions
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
+      security:
+        - accessToken: []
   /memberships/registrations/info:
     get:
       summary: Get registration info by registrationID
@@ -224,6 +226,7 @@ paths:
         - developer
       responses: {}
       operationId: get-memberships-registrations-info
+      description: Retrieve registration info.
   /payments/orders:
     get:
       summary: Get order info with orderID.
@@ -231,6 +234,9 @@ paths:
         - developer
       responses: {}
       operationId: get-payments-orders
+      description: Retrieve order info from Odoo with an orderID.
+      security:
+        - accessToken: []
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
@@ -238,6 +244,9 @@ paths:
         - developer
       responses: {}
       operationId: post-memberships-pin-reset
+      description: Reset PIN Code when user forget.
+      security:
+        - accessToken: []
 components:
   schemas:
     MetaInfo:
