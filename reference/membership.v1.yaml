@@ -169,13 +169,46 @@ paths:
                 - uid
                 - deviceToken
                 - metaInfo
+        description: Verify PIN Code from vKclub.
+      description: Verify Membership PIN Code for connection and payment.
   /memberships/pin:
     post:
       summary: Update Membership PIN Code with the old PIN.
       tags:
         - developer
-      responses: {}
+      responses:
+        '200':
+          description: OK
       operationId: post-memberships-pin
+      description: Change a new PIN Code using the current PIN.
+      security:
+        - accessToken: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                membershipID:
+                  type: string
+                uid:
+                  type: string
+                deviceToken:
+                  type: string
+                currentPIN:
+                  type: string
+                newPIN:
+                  type: string
+                metaInfo:
+                  $ref: '#/components/schemas/MetaInfo'
+              required:
+                - membershipID
+                - uid
+                - deviceToken
+                - currentPIN
+                - newPIN
+                - metaInfo
+        description: Change a new PIN Code from vKclub.
   /memberships/transactions:
     get:
       summary: Get a list of transactions of a membership account.
