@@ -5,13 +5,11 @@ info:
   description: Odoo Membership API
   contact:
     name: SuuSoJeat
+    email: suusojeat@gmail.com
 servers:
   - url: 'http://localhost:3000'
-tags:
-  - name: developer
-    description: API that will be used by developers/client app.
 paths:
-  '/memberships/{membershipID}':
+  /memberships:
     post:
       summary: Create a new membership account
       tags:
@@ -38,7 +36,7 @@ paths:
       operationId: post-memberships
       description: Creating a new membership account from vKclub app by sending personal information for verification.
       requestBody:
-        description: ''
+        description: multipart/form-data request body.
         content:
           multipart/form-data:
             schema:
@@ -74,6 +72,7 @@ paths:
                 - uid
                 - frontImage
                 - backImage
+      parameters: []
     get:
       summary: Retrieve Membership Data By ID
       operationId: get-memberships
@@ -114,18 +113,18 @@ paths:
                   - totalBalance
                   - rewardBalance
                   - willExpireTomorrowBalance
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: membershipID
+          required: true
       security:
         - accessToken: []
       description: Retrieving the membership data by ID after verified PIN code.
       tags:
         - developer
-    parameters:
-      - schema:
-          type: string
-        name: membershipID
-        in: path
-        required: true
+    parameters: []
 components:
   schemas: {}
   securitySchemes:
@@ -133,3 +132,6 @@ components:
       type: http
       scheme: Bearer
       description: Access Token acquired from PIN code verification.
+tags:
+  - name: developer
+    description: API that will be used by developers/client app.
