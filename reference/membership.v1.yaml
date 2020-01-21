@@ -22,6 +22,8 @@ paths:
                     type: string
                   status:
                     type: string
+                required:
+                  - registrationID
               examples:
                 example-success:
                   value:
@@ -30,8 +32,9 @@ paths:
       operationId: post-memberships
       description: ''
       requestBody:
+        description: ''
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
@@ -44,12 +47,26 @@ paths:
                   type: string
                 uid:
                   type: string
-                metaInfo:
-                  $ref: ../models/metainfo.v1.yaml
+                  format: uuid
+                frontImage:
+                  type: string
+                  format: binary
+                  description: Front image file.
+                backImage:
+                  type: string
+                  format: binary
+                  description: Back image file.
+                location:
+                  type: string
+                deviceModel:
+                  type: string
+                os:
+                  type: string
               required:
                 - cardType
                 - cardNumber
                 - uid
-                - metaInfo
+                - frontImage
+                - backImage
 components:
   schemas: {}
