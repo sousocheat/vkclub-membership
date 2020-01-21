@@ -211,11 +211,12 @@ paths:
         description: Change a new PIN Code from vKclub.
   /memberships/transactions:
     get:
-      summary: Get a list of transactions of a membership account.
+      summary: Listing all transactions of a membership account.
       tags:
         - developer
       responses: {}
       operationId: get-memberships-transactions
+      description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
   /memberships/registrations/info:
     get:
       summary: Get registration info by registrationID
