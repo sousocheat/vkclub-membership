@@ -17,22 +17,6 @@ paths:
       responses:
         '201':
           description: Created
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  registrationID:
-                    type: string
-                  status:
-                    type: string
-                required:
-                  - registrationID
-              examples:
-                example-success:
-                  value:
-                    registrationID: '00001'
-                    status: PENDING
       operationId: post-memberships
       description: Creating a new membership account from vKclub app by sending personal information for verification.
       requestBody:
