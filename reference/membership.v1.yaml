@@ -7,6 +7,9 @@ info:
     name: SuuSoJeat
 servers:
   - url: 'http://localhost:3000'
+tags:
+  - name: developer
+    description: API that will be used by developers/client app.
 paths:
   '/memberships/{membershipID}':
     post:
