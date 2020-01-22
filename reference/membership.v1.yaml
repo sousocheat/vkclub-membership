@@ -220,9 +220,32 @@ paths:
       summary: Get registration info by registrationID
       tags:
         - developer
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  registrationStatus:
+                    type: string
+                  email:
+                    type: string
+                  phoneNumber:
+                    type: string
+                  rejectedReason:
+                    type: string
       operationId: get-memberships-registrations-info
       description: Retrieve registration info.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: registrationID
+          required: true
   /payments/orders:
     get:
       summary: Get order info with orderID.
