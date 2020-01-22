@@ -7,7 +7,8 @@ info:
     name: SuuSoJeat
     email: suusojeat@gmail.com
 servers:
-  - url: 'http://localhost:3000'
+  - url: 'http://10.10.15.234:8069'
+    description: Backend Server
 paths:
   /memberships:
     post:
