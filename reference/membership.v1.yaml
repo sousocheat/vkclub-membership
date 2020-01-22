@@ -273,11 +273,33 @@ paths:
       summary: Reset PIN.
       tags:
         - developer
-      responses: {}
+      responses:
+        '200':
+          description: OK
       operationId: post-memberships-pin-reset
       description: Reset PIN Code when user forget.
       security:
         - accessToken: []
+  /payments/pay:
+    post:
+      summary: Commit Payment
+      tags:
+        - developer
+      responses:
+        '200':
+          description: OK
+      operationId: post-payments-pay
+      security:
+        - accessToken: []
+      description: Confirm to make payment after PIN Code verifcation successful.
+      requestBody:
+        description: Contained orderID to pay for.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: orderID
+          required: true
 components:
   schemas:
     MetaInfo:
