@@ -251,11 +251,23 @@ paths:
       summary: Get order info with orderID.
       tags:
         - developer
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
       operationId: get-payments-orders
       description: Retrieve order info from Odoo with an orderID.
       security:
         - accessToken: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: orderID
+          required: true
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
@@ -313,6 +325,33 @@ components:
         - createdAt
         - valuedAt
         - amount
+    Order:
+      title: Order
+      type: object
+      x-tags:
+        - developer
+      properties:
+        id:
+          type: string
+        vendor:
+          type: string
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              unitPrice:
+                type: number
+              imageUrl:
+                type: string
+                format: uri
+              id:
+                type: string
+        totalAmount:
+          type: number
+      description: Order detail to be displayed to user before confirming purchase.
   securitySchemes:
     accessToken:
       type: http
