@@ -109,6 +109,8 @@ paths:
           required: true
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
       description: Retrieving the membership data by ID after verified PIN code.
       tags:
         - developer
@@ -155,6 +157,9 @@ paths:
                 - metaInfo
         description: Verify PIN Code from vKclub.
       description: Verify Membership PIN Code for connection and payment.
+      security:
+        - client_id: []
+        - secret_key: []
   /memberships/pin:
     post:
       summary: Update Membership PIN Code
@@ -167,6 +172,8 @@ paths:
       description: Change a new PIN Code using the current PIN.
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
       requestBody:
         content:
           application/json:
@@ -209,6 +216,8 @@ paths:
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
       parameters:
         - schema:
             type: string
@@ -246,6 +255,9 @@ paths:
           in: query
           name: registrationID
           required: true
+      security:
+        - client_id: []
+        - secret_key: []
   /payments/orders:
     get:
       summary: Get order info with orderID.
@@ -262,6 +274,8 @@ paths:
       description: Retrieve order info from Odoo with an orderID.
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
       parameters:
         - schema:
             type: string
@@ -280,6 +294,8 @@ paths:
       description: Reset PIN Code when user forget.
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
   /payments/pay:
     post:
       summary: Commit Payment
@@ -291,6 +307,8 @@ paths:
       operationId: post-payments-pay
       security:
         - accessToken: []
+        - client_id: []
+        - secret_key: []
       description: Confirm to make payment after PIN Code verifcation successful.
       requestBody:
         description: Contained orderID to pay for.
@@ -379,6 +397,14 @@ components:
       type: http
       scheme: Bearer
       description: Access Token acquired from PIN code verification.
+    client_id:
+      type: apiKey
+      in: header
+      name: client_id_2539550b-0fbe-4d6c-8249-e04c6660ae92_o
+    secret_key:
+      name: secret_key_fff83aba-5c4d-427a-9f32-b517c749c5e3_o
+      type: apiKey
+      in: header
 tags:
   - name: developer
     description: API that will be used by developers/client app.
