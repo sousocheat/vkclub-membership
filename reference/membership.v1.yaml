@@ -198,11 +198,23 @@ paths:
       summary: Listing all transactions of a membership account.
       tags:
         - developer
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
       operationId: get-memberships-transactions
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
       security:
         - accessToken: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: transactionID
+          required: true
   /memberships/registrations/info:
     get:
       summary: Get registration info by registrationID
@@ -246,6 +258,38 @@ components:
         os:
           type: string
       description: "User's data used for analytics purpose."
+    Transaction:
+      title: Transaction
+      type: object
+      x-tags:
+        - developer
+      description: Model for membership balance transactions.
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+            - payment
+            - reward
+            - allocation
+            - top up
+        createdAt:
+          type: string
+          format: date-time
+        valuedAt:
+          type: string
+          format: date-time
+        note:
+          type: string
+        amount:
+          type: number
+      required:
+        - id
+        - type
+        - createdAt
+        - valuedAt
+        - amount
   securitySchemes:
     accessToken:
       type: http
