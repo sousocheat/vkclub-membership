@@ -375,6 +375,9 @@ components:
         - transactionDate
         - expireDate
         - amount
+        - sender
+        - receiver
+        - refNumber
     Order:
       title: Order
       type: object
