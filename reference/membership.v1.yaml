@@ -353,21 +353,27 @@ components:
             - reward
             - allocation
             - top up
-        createdAt:
+        transactionDate:
           type: string
           format: date-time
-        valuedAt:
+        expireDate:
           type: string
           format: date-time
-        note:
+        remark:
           type: string
         amount:
           type: number
+        sender:
+          type: string
+        receiver:
+          type: string
+        refNumber:
+          type: string
       required:
         - id
         - type
-        - createdAt
-        - valuedAt
+        - transactionDate
+        - expireDate
         - amount
     Order:
       title: Order
