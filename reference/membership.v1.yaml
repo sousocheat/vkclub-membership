@@ -37,14 +37,10 @@ paths:
                 uid:
                   type: string
                   format: uuid
-                frontImage:
+                cardImage:
                   type: string
                   format: binary
                   description: Front image file.
-                backImage:
-                  type: string
-                  format: binary
-                  description: Back image file.
                 location:
                   type: string
                 deviceModel:
@@ -58,8 +54,7 @@ paths:
                 - cardType
                 - cardNumber
                 - uid
-                - frontImage
-                - backImage
+                - cardImage
                 - selfieImage
       parameters: []
       security:
