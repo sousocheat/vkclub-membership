@@ -7,7 +7,7 @@ info:
     name: SuuSoJeat
     email: suusojeat@gmail.com
 servers:
-  - url: 'http://10.10.15.234:8069'
+  - url: 'http://{server_ip}:8069'
     description: Backend Server
 paths:
   /memberships:
