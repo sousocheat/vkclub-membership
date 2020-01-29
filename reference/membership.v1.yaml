@@ -210,7 +210,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Transaction'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
       operationId: get-memberships-transactions
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
       security:
@@ -221,7 +223,7 @@ paths:
         - schema:
             type: string
           in: query
-          name: transactionID
+          name: membershipID
           required: true
   /memberships/registrations/info:
     get:
