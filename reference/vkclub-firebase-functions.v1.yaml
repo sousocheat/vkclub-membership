@@ -43,6 +43,11 @@ paths:
                           type: string
                     data:
                       type: object
+                      properties:
+                        key1:
+                          type: string
+                        key2:
+                          type: string
         description: 'The body is dynamic to the API, but must be synchronised between UI code and backend code.'
       security:
         - Odoo-Key: []
