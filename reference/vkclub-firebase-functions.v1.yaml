@@ -20,7 +20,7 @@ paths:
       operationId: get-sendNotification
       description: |-
         Send a notification to a device using deviceToken or UID.
-        (For PIN notification and communication from Odoo to user.)
+        (For PIN notification and communication from Odoo to user directly.)
       requestBody:
         content:
           application/json:
