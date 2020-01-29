@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: vKclub Firebase Functions
+  version: '1.0'
+  contact:
+    name: SuuSoJeat
+    email: suusojeat@gmail.com
+  description: API for Odoo to connect to vKclub app.
+servers:
+  - url: 'https://us-central1-vkclub-f8de2.cloudfunctions.net'
+paths:
+  /sendNotification:
+    get:
+      summary: Send notification to one device.
+      tags:
+        - developer
+      responses:
+        '200':
+          description: OK
+      operationId: get-sendNotification
+      description: |-
+        Send a notification to a device using deviceToken or UID.
+        (For PIN notification and communication from Odoo to user.)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: object
+                  properties:
+                    uid:
+                      type: string
+                    deviceToken:
+                      type: string
+                    notification:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        body:
+                          type: string
+                    data:
+                      type: object
+        description: 'The body is dynamic to the API, but must be synchronised between UI code and backend code.'
+      security:
+        - Odoo-Key: []
+components:
+  schemas: {}
+  securitySchemes:
+    Odoo-Key:
+      name: API-Key
+      type: apiKey
+      in: header
+      description: ZoAItrYN09YN19x610A7
