@@ -1,0 +1,685 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "0kPBXnKyfpPbf4HhqH3E",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0648,
+          11.3134
+        ]
+      },
+      "properties": {
+        "title": "Camping Area",
+        "description": "Enjoy camping with camp fire in a large open space with high level of security.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcamping_area_1.webp?alt=media&token=44a35d02-a2a0-4159-ba0f-7773e5d1dc9c",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcamping_area_2.webp?alt=media&token=7874d8a1-d85d-48a5-a48b-b5e8c5a89744",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcamping_area_3.webp?alt=media&token=1d9f4802-2c38-44b6-9196-217263b8c2ea"
+        ]
+      }
+    },
+    {
+      "id": "2qhSa3L5pAlrNbJ9gkv1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0751,
+          11.3136
+        ]
+      },
+      "properties": {
+        "title": "Crazy Hill",
+        "description": "An outdoor stage for outdoor events and parties.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcrazy_hill_1.webp?alt=media&token=ce75644a-1ef5-4819-a06c-d3aab10e2d55",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcrazy_hill_2.webp?alt=media&token=93c634b1-640c-4bc5-89cc-14a4ea2b0e97",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcrazy_hill_3.webp?alt=media&token=2b16f1d0-f3a2-4832-a810-3211951673da"
+        ]
+      }
+    },
+    {
+      "id": "4OaTRc6pmTqUGMvl0qui",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0648,
+          11.3165
+        ]
+      },
+      "properties": {
+        "title": "Activity Center",
+        "description": "Information regarding various types of fun activities to refresh your mind. Open 8:00am - 5pm",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Factivity_1.webp?alt=media&token=57a694b6-32ad-4af8-a1d6-dfacd8ffaa39",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Factivity_2.webp?alt=media&token=6ef5fd4b-1476-4ac0-b80b-d756b6b13721",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Factivity_3.webp?alt=media&token=ee124688-9d2f-4c3b-9de2-62ec7e6d15cb"
+        ]
+      }
+    },
+    {
+      "id": "6Gc0ywuDZMReFGLXE4FK",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0649,
+          11.3158
+        ]
+      },
+      "properties": {
+        "title": "Climbing Theater",
+        "description": "A multipurpose building which is used for wall climbing during the day and as a movie screen at night.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fclimbing_theater_1.webp?alt=media&token=dacab4d3-4d0b-4950-bd92-948eaad24469",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fclimbing_theater_2.webp?alt=media&token=d38441c8-81a0-4d90-b84b-c8ff66080657",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fclimbing_theater_3.webp?alt=media&token=31b393aa-2ff3-4b66-97a6-3ca56b916cea"
+        ]
+      }
+    },
+    {
+      "id": "7Tm4AmLNoVG9iMG18FRV",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0647,
+          11.3169
+        ]
+      },
+      "properties": {
+        "title": "Parking Area",
+        "description": "Large secure parking space for customers.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fparking_area_1.webp?alt=media&token=32b707e5-142d-4f92-9660-a42f2c1a8daf",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fparking_area_2.webp?alt=media&token=b21391d0-0c40-47ef-9263-8d02b615f6e2",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fparking_area_3.webp?alt=media&token=68f18ad4-1f72-4cb8-98ac-ed72aff93aee"
+        ]
+      }
+    },
+    {
+      "id": "8BjQYNAVQ3uwAe1y2pJ1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0531,
+          11.333
+        ]
+      },
+      "properties": {
+        "title": "Ministry of Environment",
+        "description": "Ministry of Environment that supports the whole Kirirom Mountain.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fministry_of_environment_1.webp?alt=media&token=d6bbce93-de5e-4e4f-848d-c541340671c4",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fministry_of_environment_2.webp?alt=media&token=4244eccd-3938-4fda-8cc5-57d430da8dfe",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fministry_of_environment_3.webp?alt=media&token=10cb1e85-1f3d-4aa0-9ae4-3803ffa7873c"
+        ]
+      }
+    },
+    {
+      "id": "EDaWYwMLoYIfNF7cy4So",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0654,
+          11.3139
+        ]
+      },
+      "properties": {
+        "title": "Container Cafe",
+        "description": "A place for coffee lovers who enjoy having the amazing flavours with fresh air and a nice view.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcontainer_cafe_1.webp?alt=media&token=43fec7d3-e5e7-4bb5-bba8-e3d0ae648161",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcontainer_cafe_2.webp?alt=media&token=752f6e58-c1d7-4b0b-9ad6-2857a45f61a0",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcontainer_cafe_3.webp?alt=media&token=28a78df1-bc76-43bb-8502-ac1999704040"
+        ]
+      }
+    },
+    {
+      "id": "ImbShKDCP9OrtOBsLcHy",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0646,
+          11.3145
+        ]
+      },
+      "properties": {
+        "title": "Luxury Tent",
+        "description": "High quality modern tent house offers the comfort of a hotel room in an outer space that features a king size bed and a nice shower room.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fluxury_tent_1.webp?alt=media&token=a32b9fce-98de-43f8-be69-b1c65344234b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fluxury_tent_2.webp?alt=media&token=8892a1d1-eecb-4467-8796-b9f69a77db0c",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fluxury_tent_3.webp?alt=media&token=901eeb16-4b3d-4457-bdfd-0493dbff8d01"
+        ]
+      }
+    },
+    {
+      "id": "LXekiUEaQDeuS1pAW0kS",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0653,
+          11.3121
+        ]
+      },
+      "properties": {
+        "title": "Tennis Court",
+        "description": "Enjoy tennis on top of the mountain surrounded by pine trees.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ftennis_court_1.webp?alt=media&token=a3bd8cff-e9ce-48b5-a568-3683913fca81",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ftennis_court_2.webp?alt=media&token=6ce50801-9223-4268-8a48-bdab234394eb",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ftennis_court_3.webp?alt=media&token=fe3a0aa2-5bfe-46e4-87a9-6172549f341f"
+        ]
+      }
+    },
+    {
+      "id": "Mdy2OE4Pv7G3PdM7zYbm",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0658,
+          11.3168
+        ]
+      },
+      "properties": {
+        "title": "Swimming Pool",
+        "description": "Enjoy our outdoor swimming pool with family and friends.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fswimming_pool_1.webp?alt=media&token=61a78941-6341-44d2-b0b6-b1132036dc52",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fswimming_pool_2.webp?alt=media&token=73c8c79b-1e72-48fa-af90-710904bbaa63",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fswimming_pool_3.webp?alt=media&token=61297d17-dfb3-45a8-b7cd-e259a3acc72f"
+        ]
+      }
+    },
+    {
+      "id": "N1V2dF7VU9yCEyEagJLn",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0658,
+          11.3165
+        ]
+      },
+      "properties": {
+        "title": "Bungalow",
+        "description": "Come and stay in our specially designed Bungalows to experience the invigorating fresh air and peaceful life among the pine forest of Kirirom.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbungalow_1.webp?alt=media&token=7921d70f-4447-466a-afbb-76de8892251a",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbungalow_2.webp?alt=media&token=05577739-0ff2-41c3-aafe-231c081bc87e",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbungalow_3.webp?alt=media&token=0fcaca7e-17fd-443a-a19e-331c2c4573f8"
+        ]
+      }
+    },
+    {
+      "id": "NqbrTjUxVy9MpVdcrZfy",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0646,
+          11.3126
+        ]
+      },
+      "properties": {
+        "title": "Bell tent",
+        "description": "Glamping, glamorous camping provides you a good sleep on a fluffy bed.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbell_tent_1.webp?alt=media&token=b8b55d47-3ddb-4e6d-9f9a-9b3bbd8fd4b9",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbell_tent_2.webp?alt=media&token=a8ab1d3b-8423-4e48-86cf-add5c53f61ce",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fbell_tent_3.webp?alt=media&token=81e1b30e-74b5-45e3-a63a-a666e21292ff"
+        ]
+      }
+    },
+    {
+      "id": "OcptH0ywq07wAIj1zCEN",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0649,
+          11.3174
+        ]
+      },
+      "properties": {
+        "title": "Reception",
+        "description": "VKirirom Pine Resort reception welcomes customers from 8 AM to 8 PM. Our helpful staffs can speak English, Japanese, and Khmer. Amenities for customers are provided here as well.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Freception_1.webp?alt=media&token=f5dca49f-73e1-44a0-8dfb-0a675e8df119",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Freception_2.webp?alt=media&token=1dd0c003-faec-4794-9d33-c1a064068bf2",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Freception_3.webp?alt=media&token=155e48ab-e698-42a8-9d42-ed59b9ccd67e"
+        ]
+      }
+    },
+    {
+      "id": "QTsU27RPktgfGMojD0CI",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0597,
+          11.3409
+        ]
+      },
+      "properties": {
+        "title": "Dragon Roundabout",
+        "description": "A landmark statue of snake god with four heads which is situated in the middle of the intersection.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fdragon_roundabout_1.webp?alt=media&token=09d7d1c9-04a5-476f-96a9-c6f8b8692727",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fdragon_roundabout_2.webp?alt=media&token=4aa303df-0c95-40fa-9e94-8398bece10da",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fdragon_roundabout_3.webp?alt=media&token=97a4feb6-42e6-47ce-a66a-ceb7dd6e6f2d"
+        ]
+      }
+    },
+    {
+      "id": "QvbZ39akILnZlQvjIp5m",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0516,
+          11.3344
+        ]
+      },
+      "properties": {
+        "title": "Kirirom Lake",
+        "description": "A beautiful lake,  which provides enough water supply for all the villagers",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_lake_1.webp?alt=media&token=418a8d09-c068-47f9-adf8-b5a12b292e5c",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_lake_2.webp?alt=media&token=0b354af6-fb6a-44b0-8254-a1ceaffd36cd",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_lake_3.webp?alt=media&token=e41ab36c-90f3-4f62-9a5f-9a52de483bcf"
+        ]
+      }
+    },
+    {
+      "id": "UnmI39hv9bNTqTpQJ82n",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0653,
+          11.3167
+        ]
+      },
+      "properties": {
+        "title": "Pine View Kitchen",
+        "description": "An open space restaurant where you can enjoy modern Khmer cuisine",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpine_view_kitchen_1.webp?alt=media&token=84f56c7a-d2e5-4b79-8de7-27ca539e756e",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpine_view_kitchen_2.webp?alt=media&token=ed70e6a1-1479-40e7-9dde-b184181a400b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpine_view_kitchen_3.webp?alt=media&token=a8dba73c-53c4-4742-9559-70c8fec8d8c5"
+        ]
+      }
+    },
+    {
+      "id": "Vnx5tsHtock3x2yRWXxF",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0654,
+          11.3162
+        ]
+      },
+      "properties": {
+        "title": "Playground Field",
+        "description": "Enjoy many kinds of activities including football, tennis, volleyball, bubble sumo etc. Feel free to ask our activity staff for details.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fplayground_field_1.webp?alt=media&token=9ab1e9c4-fdde-407e-9e47-b341ba7a57ff",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fplayground_field_2.webp?alt=media&token=e79e4d19-8f50-4a72-a4a7-bf85e6bfa80b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fplayground_field_3.webp?alt=media&token=0173a68b-a727-44e9-9d26-0be650b2c963"
+        ]
+      }
+    },
+    {
+      "id": "WJFSWVv9rbM2k5eFLY3s",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0769,
+          11.3304
+        ]
+      },
+      "properties": {
+        "title": "New Kirirom Pagoda",
+        "description": "A mural painting of buddha's life inside of a building which is located.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fnew_kirirom_pagoda_1.webp?alt=media&token=182aa22e-4415-43cd-8b9d-b0073b90898c",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fnew_kirirom_pagoda_2.webp?alt=media&token=5f56ac66-5fe7-441a-9de4-87f43628291b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fnew_kirirom_pagoda_3.webp?alt=media&token=10de4904-a21f-4b14-8dc5-b93cbbf40875"
+        ]
+      }
+    },
+    {
+      "id": "XjajglWkRJ2tFcvhiQ1K",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0633,
+          11.3181
+        ]
+      },
+      "properties": {
+        "title": "Villa Jasmine",
+        "description": "quiet and elegant cottages which is located on The cool Mountain top of Kirirom. The cool Mountain top of Kirirom. Promises a pleasant experience for couples and small families.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_jasmine_1.webp?alt=media&token=ba564158-6254-4479-bb97-eec375cdadff",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_jasmine_2.webp?alt=media&token=13538a0e-8594-4e9d-81e6-6ce588e30351",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_jasmine_3.webp?alt=media&token=1e77c398-dbf7-40d0-9ca9-6ad204ce2d53"
+        ]
+      }
+    },
+    {
+      "id": "YVJ1XOfnq0bDpQeCGpNv",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.055,
+          11.3348
+        ]
+      },
+      "properties": {
+        "title": "Village",
+        "description": "A Village where people enjoy living on Kirirom Mountain with nice view",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvillage_1.webp?alt=media&token=ee1bc1d5-469d-45c9-bc67-16c424466c45",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvillage_2.webp?alt=media&token=b86489a2-a556-49b0-bb7e-b91e4e78c159",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvillage_3.webp?alt=media&token=33c037d4-b4ae-4b6c-9348-8034b8927ae9"
+        ]
+      }
+    },
+    {
+      "id": "YgpuRDQpe3WikK9Ey6Hd",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0348,
+          11.3438
+        ]
+      },
+      "properties": {
+        "title": "First Waterfall",
+        "description": "The most beautiful waterfall in Kiriorm mountain which attracts lots of tourists who comes to visit.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffirst_waterfall_1.webp?alt=media&token=3ef4ccd0-145a-4790-9099-a4a31ccb4646",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffirst_waterfall_2.webp?alt=media&token=5cce1643-0bd7-4541-8b8d-813a39de2a8f",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffirst_waterfall_3.webp?alt=media&token=6e891a9f-821e-4fe7-9d6c-406c52d9883f"
+        ]
+      }
+    },
+    {
+      "id": "ZBmmBrtjjgQlBwSe6Tbi",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0644,
+          11.3149
+        ]
+      },
+      "properties": {
+        "title": "Khmer Cottage",
+        "description": "Khmer farmer style open houses built with natural materials to experience the Khmer tradition.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkhmer_cottage_1.webp?alt=media&token=538a070a-7703-45b3-8fcf-6273d116189e",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkhmer_cottage_2.webp?alt=media&token=ddfe60f8-9f17-4596-94aa-8ed948f9d111",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkhmer_cottage_3.webp?alt=media&token=6ec55961-3c23-4b1a-9408-dd6ea2cde3a1"
+        ]
+      }
+    },
+    {
+      "id": "c0ZinhRUYfnGUGbQrZAA",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0784,
+          11.3111
+        ]
+      },
+      "properties": {
+        "title": "Otrosek Waterfall",
+        "description": "Otrosek Waterfall is a lovely place that is allowed by the locals and is highly recommended during rainy season.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fotrosek_waterfall_1.webp?alt=media&token=c60ffb49-57d0-49e9-90df-90f154fd8a48",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fotrosek_waterfall_2.webp?alt=media&token=9f901989-4d9c-4a2c-90c1-bc7be893e72d",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fotrosek_waterfall_3.webp?alt=media&token=0eff54c1-c78f-4483-be77-e95a3d6889cd"
+        ]
+      }
+    },
+    {
+      "id": "cTA8GQjpGLl5H6IM6btW",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0667,
+          11.3137
+        ]
+      },
+      "properties": {
+        "title": "Conference Tent",
+        "description": "A large tent which is suitable for big events,conferences and many activities even during rainy days.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fconference_tent_1.webp?alt=media&token=599835f0-9371-4ef4-9f0e-a286d1260ad4",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fconference_tent_2.webp?alt=media&token=31cffa79-b5b1-46f3-9f62-38d93a666257",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fconference_tent_3.webp?alt=media&token=4ebba1b9-3c7e-4710-8a9f-ff54bce672f8"
+        ]
+      }
+    },
+    {
+      "id": "gWd1u51KXG8qzK8AUhWR",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0676,
+          11.3152
+        ]
+      },
+      "properties": {
+        "title": "Kirirom Institute of Technology",
+        "description": "The first boarding school in Cambodia, specialized in software engineering and offers internship while studying.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_institute_of_technology_1.webp?alt=media&token=b378f8b2-453e-4fa3-a365-f9baa31d7e1b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_institute_of_technology_2.webp?alt=media&token=bff531ee-6c53-4b58-a5e0-11140f207cfc",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fkirirom_institute_of_technology_3.webp?alt=media&token=072e1ec6-3ab8-4d8c-837c-e90f67ac9ac3"
+        ]
+      }
+    },
+    {
+      "id": "hDrraZmP84lY5WuVvib6",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0362,
+          11.3201
+        ]
+      },
+      "properties": {
+        "title": "Old Kirirom Pagoda",
+        "description": "It is a Buddhist temple with the longest history in Kirirom. It reminds of the old good days in Cambodia. Please follow the appropriate pattern of worship there.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fold_kirirom_pagoda_1.webp?alt=media&token=97cbbd16-c504-44be-8aab-cb4b0199ece2",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fold_kirirom_pagoda_2.webp?alt=media&token=4f370a4b-e0a8-4302-8285-11a142a1aa77",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fold_kirirom_pagoda_3.webp?alt=media&token=bfcd1e13-2467-464e-8970-a7333b2f79f0"
+        ]
+      }
+    },
+    {
+      "id": "lg53Gl1kXO2mqJ5RSVOa",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0553,
+          11.3345
+        ]
+      },
+      "properties": {
+        "title": "Kirirom Elementary School",
+        "description": "Established by the vKirirom stuff which is the only elementary school in Kirirom.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcoconut_school_1.webp?alt=media&token=972cb124-0469-48d3-b053-d92a2eff1198",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcoconut_school_2.webp?alt=media&token=b580f878-cf13-4ab1-acde-2456f61f123b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fcoconut_school_3.webp?alt=media&token=df7a608f-87ca-4b4d-b269-38daa5e8be0a"
+        ]
+      }
+    },
+    {
+      "id": "m2wxFIPpYtET8ica5KAn",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0638,
+          11.3154
+        ]
+      },
+      "properties": {
+        "title": "Moringa",
+        "description": "Khmer style infused restaurant which serves authentic Khmer meals and sells breads and drinks.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fmoringa_1.webp?alt=media&token=c79d0571-2963-4fc4-a066-056474644c3b",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fmoringa_2.webp?alt=media&token=a3f68a53-e4ee-4f40-988e-954d9483cd7a",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fmoringa_3.webp?alt=media&token=f4e87649-eb74-435d-ab56-0ad13077ec31"
+        ]
+      }
+    },
+    {
+      "id": "rKJTn1qIenXL5LIsqIDC",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0379,
+          11.3291
+        ]
+      },
+      "properties": {
+        "title": "Srash Srang Lake",
+        "description": "A picture perfect landscape where you feel the magnificence of Nature.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fsrash_srang_lake_1.webp?alt=media&token=82018105-5701-42ff-969b-b6d94fef6ab1",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fsrash_srang_lake_2.webp?alt=media&token=3afde8e7-1d41-4248-8d74-1bdcf88faad4",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fsrash_srang_lake_3.webp?alt=media&token=57e479ee-1df4-43aa-ac1a-bf1a80483136"
+        ]
+      }
+    },
+    {
+      "id": "rrnASGNrOC2EhqFHkz7a",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0636,
+          11.3134
+        ]
+      },
+      "properties": {
+        "title": "Farm",
+        "description": "An organic farm that grows a variety of foods such as Strawberry, Pineapple, Passion fruits etc.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffarm_1.webp?alt=media&token=a5bba2b9-b70c-468b-8eb4-40458560a987",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffarm_2.webp?alt=media&token=5334f944-e382-4ac3-9d5c-400a77f2b184",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Ffarm_3.webp?alt=media&token=6486fa5f-2870-4982-9109-29b4b7691ee9"
+        ]
+      }
+    },
+    {
+      "id": "sU8jcLCLnSUtnEIJ4woa",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0655,
+          11.318
+        ]
+      },
+      "properties": {
+        "title": "Villa Suite",
+        "description": "this two bedroom luxurious modern villa is suitable for big families or groups.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_suite_1.webp?alt=media&token=57c99f2a-a305-47b4-82dc-8c19c8ac4803",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_suite_2.webp?alt=media&token=586e52fd-ee4d-4462-888f-8dd1fd5c888c",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvilla_suite_3.webp?alt=media&token=7c6ab865-e6ee-4eaf-ac1b-e387139c83f8"
+        ]
+      }
+    },
+    {
+      "id": "sYcnqAViwQO60g2c6bNE",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0407,
+          11.3351
+        ]
+      },
+      "properties": {
+        "title": "Visitor Center",
+        "description": "A visitor center, which introduces the history of Kirirom. It is a wonderful photogenic spot.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvisitor_center_1.webp?alt=media&token=640ce43f-a587-4c80-ba3b-76808e64e1e6",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvisitor_center_2.webp?alt=media&token=26abef7d-955d-42e1-8903-be5353c43887",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fvisitor_center_3.webp?alt=media&token=2e278bd6-e7f9-4842-873e-c6c6d63c5242"
+        ]
+      }
+    },
+    {
+      "id": "tfiZiyi5Em3ZhoaWsOtq",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0628,
+          11.3126
+        ]
+      },
+      "properties": {
+        "title": "Pipe Room",
+        "description": "The most uniquely designed room derived from an earthen pipe which serves best among all.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpipe_room_1.webp?alt=media&token=3a23859d-7fd5-49ff-85c8-fecd52260634",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpipe_room_2.webp?alt=media&token=d083e4ed-03e6-4359-bf0b-4027a59e9785",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fpipe_room_3.webp?alt=media&token=52b0f4e2-8b2d-4ea5-a33b-cbca10e55467"
+        ]
+      }
+    },
+    {
+      "id": "ytFpuDCcbJmpVLLN2GAB",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0606,
+          11.3309
+        ]
+      },
+      "properties": {
+        "title": "King's Residence",
+        "description": "The King's residence is an Old- fashioned cottage built of bricks which stands quietly in Pine Grove.",
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fking_s_residence_1.webp?alt=media&token=e1f97b46-1c13-450e-9bf8-5d5d7a747cb7",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fking_s_residence_2.webp?alt=media&token=835c2537-d806-4178-93e1-88a19a3e98ea",
+          "https://firebasestorage.googleapis.com/v0/b/vkclub-app-cd44a.appspot.com/o/markersImages%2Fking_s_residence_3.webp?alt=media&token=6298a14e-5179-405f-b21a-dbab1a28c064"
+        ]
+      }
+    }
+  ]
+}
