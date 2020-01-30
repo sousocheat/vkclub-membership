@@ -109,7 +109,7 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
       description: Retrieving the membership data by ID after verified PIN code.
       tags:
         - developer
@@ -158,7 +158,7 @@ paths:
       description: Verify Membership PIN Code for connection and payment.
       security:
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
   /memberships/pin:
     post:
       summary: Update Membership PIN Code
@@ -172,7 +172,7 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
       requestBody:
         content:
           application/json:
@@ -218,7 +218,7 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
       parameters:
         - schema:
             type: string
@@ -258,7 +258,7 @@ paths:
           required: true
       security:
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
   /payments/orders:
     get:
       summary: Get order info with orderID.
@@ -276,7 +276,7 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
       parameters:
         - schema:
             type: string
@@ -296,7 +296,7 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
   /payments/pay:
     post:
       summary: Commit Payment
@@ -309,16 +309,37 @@ paths:
       security:
         - accessToken: []
         - apiClientId: []
-        - apiSecretKey: []
+        - clientToken: []
       description: Confirm to make payment after PIN Code verifcation successful.
       requestBody:
         description: Contained orderID to pay for.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
       parameters:
         - schema:
             type: string
           in: query
           name: orderID
           required: true
+  /client_token:
+    get:
+      summary: /client_token
+      tags: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized - Key Invalid
+        '403':
+          description: Forbidden - Key Missing
+      operationId: get-client_token
+      description: Request to generate new client-token
+      security:
+        - apiClientId: []
+        - apiSecretKey: []
 components:
   schemas:
     MetaInfo:
@@ -416,6 +437,9 @@ components:
       name: secret_key
       type: apiKey
       in: header
+    clientToken:
+      type: http
+      scheme: Bearer
 tags:
   - name: developer
     description: API that will be used by developers/client app.
