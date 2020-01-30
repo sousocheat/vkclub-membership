@@ -305,6 +305,8 @@ paths:
       responses:
         '200':
           description: OK
+        '201':
+          description: Created
       operationId: post-payments-pay
       security:
         - accessToken: []
@@ -331,15 +333,52 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  clientToken:
+                    type: string
+                  expireAt:
+                    type: string
+                    format: date-time
+                    example: "'%d-%m-%Y %H:%M:%S"
+              examples: {}
         '401':
-          description: Unauthorized - Key Invalid
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
         '403':
-          description: Forbidden - Key Missing
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
       operationId: get-client_token
       description: Request to generate new client-token
       security:
         - apiClientId: []
         - apiSecretKey: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
 components:
   schemas:
     MetaInfo:
