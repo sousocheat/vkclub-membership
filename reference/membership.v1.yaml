@@ -276,6 +276,7 @@ paths:
       security:
         - apiClientId: []
         - clientToken: []
+        - accessToken: []
       parameters:
         - schema:
             type: string
