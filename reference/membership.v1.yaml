@@ -210,8 +210,6 @@ paths:
             schema:
               type: object
               properties:
-                membershipID:
-                  type: string
                 currentPinCode:
                   type: string
                 newPinCode:
@@ -219,7 +217,6 @@ paths:
                 cfmNewPinCode:
                   type: string
               required:
-                - membershipID
                 - currentPinCode
                 - newPinCode
                 - cfmNewPinCode
@@ -303,6 +300,12 @@ paths:
                 properties:
                   '':
                     type: string
+            multipart/form-data:
+              schema:
+                type: object
+                properties:
+                  '':
+                    type: string
       operationId: get-payments-orders
       description: Retrieve order info from Odoo with an orderID.
       security:
@@ -323,8 +326,17 @@ paths:
               properties:
                 paymentType:
                   type: string
-                key:
+                purchaseItems:
                   type: string
+            examples:
+              example-1:
+                value:
+                  paymentType: one-time
+                  keyInfo: product_id
+              example-2:
+                value:
+                  paymentType: order
+                  keyInfo: order_id
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
