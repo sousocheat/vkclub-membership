@@ -37,10 +37,6 @@ paths:
                 uid:
                   type: string
                   format: uuid
-                cardImage:
-                  type: string
-                  format: binary
-                  description: Front image file.
                 location:
                   type: string
                 deviceModel:
@@ -50,6 +46,10 @@ paths:
                 selfieImage:
                   type: string
                   format: binary
+                cardImage:
+                  type: string
+                  format: binary
+                  description: Front image file.
               required:
                 - cardType
                 - cardNumber
@@ -58,8 +58,7 @@ paths:
                 - selfieImage
       parameters: []
       security:
-        - apiClientId: []
-        - apiSecretKey: []
+        - Client Id: []
     get:
       summary: Retrieve Membership Data By ID
       operationId: get-memberships
@@ -108,8 +107,8 @@ paths:
           required: true
       security:
         - accessToken: []
-        - apiClientId: []
-        - clientToken: []
+        - Client Id: []
+        - Client Token: []
       description: Retrieving the membership data by ID after verified PIN code.
       tags:
         - developer
@@ -157,9 +156,9 @@ paths:
         description: Verify PIN Code from vKclub.
       description: Verify Membership PIN Code for connection and payment.
       security:
-        - apiClientId: []
-        - clientToken: []
-  /memberships/pin:
+        - Client Id: []
+        - Client Token: []
+  /memberships/pin/change:
     post:
       summary: Update Membership PIN Code
       tags:
@@ -167,12 +166,44 @@ paths:
       responses:
         '200':
           description: OK
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Invalid New PIN
+                    message: New PIN and Confirm PIN is not matched
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Incorrect PIN
+                    message: Current PIN is invalid
       operationId: post-memberships-pin
       description: Change a new PIN Code using the current PIN.
       security:
         - accessToken: []
-        - apiClientId: []
-        - clientToken: []
+        - Client Id: []
+        - Client Token: []
       requestBody:
         content:
           application/json:
@@ -181,24 +212,19 @@ paths:
               properties:
                 membershipID:
                   type: string
-                uid:
+                currentPinCode:
                   type: string
-                deviceToken:
+                newPinCode:
                   type: string
-                currentPIN:
+                cfmNewPinCode:
                   type: string
-                newPIN:
-                  type: string
-                metaInfo:
-                  $ref: '#/components/schemas/MetaInfo'
               required:
                 - membershipID
-                - uid
-                - deviceToken
-                - currentPIN
-                - newPIN
-                - metaInfo
+                - currentPinCode
+                - newPinCode
+                - cfmNewPinCode
         description: Change a new PIN Code from vKclub.
+    parameters: []
   /memberships/transactions:
     get:
       summary: Listing all transactions of a membership account.
@@ -217,8 +243,8 @@ paths:
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
       security:
         - accessToken: []
-        - apiClientId: []
-        - clientToken: []
+        - Client Id: []
+        - Client Token: []
       parameters:
         - schema:
             type: string
@@ -250,15 +276,15 @@ paths:
                     type: string
       operationId: get-memberships-registrations-info
       description: Retrieve registration info.
+      security:
+        - Client Id: []
+        - Client Token: []
       parameters:
         - schema:
             type: string
           in: query
           name: registrationID
           required: true
-      security:
-        - apiClientId: []
-        - clientToken: []
   /payments/orders:
     get:
       summary: Get order info with orderID.
@@ -271,11 +297,17 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Order'
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  '':
+                    type: string
       operationId: get-payments-orders
       description: Retrieve order info from Odoo with an orderID.
       security:
-        - apiClientId: []
-        - clientToken: []
+        - Client Id: []
+        - Client Token: []
         - accessToken: []
       parameters:
         - schema:
@@ -283,6 +315,16 @@ paths:
           in: query
           name: orderID
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                paymentType:
+                  type: string
+                key:
+                  type: string
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
@@ -295,37 +337,19 @@ paths:
       description: Reset PIN Code when user forget.
       security:
         - accessToken: []
-        - apiClientId: []
-        - clientToken: []
-  /payments/pay:
-    post:
-      summary: Commit Payment
-      tags:
-        - developer
-      responses:
-        '200':
-          description: OK
-        '201':
-          description: Created
-      operationId: post-payments-pay
-      security:
-        - accessToken: []
-        - apiClientId: []
-        - clientToken: []
-      description: Confirm to make payment after PIN Code verifcation successful.
+        - Client Id: []
+        - Client Token: []
+      parameters: []
       requestBody:
-        description: Contained orderID to pay for.
         content:
           application/json:
             schema:
               type: object
-              properties: {}
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: orderID
-          required: true
+              properties:
+                newPin:
+                  type: string
+                cfmNewPin:
+                  type: string
   /client_token:
     get:
       summary: /client_token
@@ -376,8 +400,7 @@ paths:
       operationId: get-client_token
       description: Request to generate new client-token
       security:
-        - apiClientId: []
-        - apiSecretKey: []
+        - Client Id: []
       requestBody:
         description: ''
         content:
@@ -385,6 +408,35 @@ paths:
             schema:
               type: object
               properties: {}
+  /payments/pay:
+    post:
+      summary: Commit Payment
+      tags:
+        - developer
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+      operationId: post-payments-pay
+      security:
+        - accessToken: []
+        - Client Id: []
+        - Client Token: []
+      description: Confirm to make payment after PIN Code verifcation successful.
+      requestBody:
+        description: Contained orderID to pay for.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: orderID
+          required: true
 components:
   schemas:
     MetaInfo:
@@ -400,6 +452,33 @@ components:
         os:
           type: string
       description: "User's data used for analytics purpose."
+    Order:
+      title: Order
+      type: object
+      x-tags:
+        - developer
+      properties:
+        id:
+          type: string
+        vendor:
+          type: string
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              unitPrice:
+                type: number
+              imageUrl:
+                type: string
+                format: uri
+              id:
+                type: string
+        totalAmount:
+          type: number
+      description: Order detail to be displayed to user before confirming purchase.
     Transaction:
       title: Transaction
       type: object
@@ -441,50 +520,23 @@ components:
         - sender
         - receiver
         - refNumber
-    Order:
-      title: Order
-      type: object
-      x-tags:
-        - developer
-      properties:
-        id:
-          type: string
-        vendor:
-          type: string
-        items:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              unitPrice:
-                type: number
-              imageUrl:
-                type: string
-                format: uri
-              id:
-                type: string
-        totalAmount:
-          type: number
-      description: Order detail to be displayed to user before confirming purchase.
   securitySchemes:
     accessToken:
       type: http
-      scheme: Bearer
-      description: Access Token acquired from PIN code verification.
-    apiClientId:
+      scheme: bearer
+    Client Token:
+      name: client_token
+      type: apiKey
+      in: header
+    Client Id:
       name: client_id
       type: apiKey
       in: header
       description: ''
-    apiSecretKey:
-      name: secret_key
+    Client Secret Key:
       type: apiKey
       in: header
-    clientToken:
-      type: http
-      scheme: Bearer
+      name: secret_key
 tags:
   - name: developer
     description: API that will be used by developers/client app.
