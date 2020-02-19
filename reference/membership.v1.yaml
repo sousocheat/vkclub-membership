@@ -469,8 +469,9 @@ paths:
                   type: string
   /client_token:
     get:
-      summary: /client_token
-      tags: []
+      summary: Get Client Token
+      tags:
+        - developer
       responses:
         '200':
           description: OK
@@ -559,7 +560,8 @@ paths:
   '/memberships/<membershipID:string>':
     get:
       summary: Get public membership info
-      tags: []
+      tags:
+        - developer
       responses:
         '200':
           description: OK
