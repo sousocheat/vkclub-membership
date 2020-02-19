@@ -18,6 +18,27 @@ paths:
       responses:
         '201':
           description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '422':
+          description: Unprocessable Entity
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Invalid Payload
+                    message: "'cardType' is a required property"
       operationId: post-memberships
       description: Creating a new membership account from vKclub app by sending personal information for verification.
       requestBody:
@@ -59,6 +80,7 @@ paths:
       parameters: []
       security:
         - Client Id: []
+        - Client Token: []
     get:
       summary: Retrieve Membership Data By ID
       operationId: get-memberships
@@ -99,12 +121,31 @@ paths:
                   - totalBalance
                   - rewardBalance
                   - willExpireTomorrowBalance
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: membershipID
-          required: true
+              examples:
+                example-1:
+                  value:
+                    id: 81
+                    name: Chan Dara
+                    membershipStatus: No Status
+                    registrationStatus: Approved
+                    level: 1
+                    totalBalance: 0
+                    rewardBalance: 0
+                    willExpireTomorrowBalance: 0
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  body:
+                    type: string
+              examples:
+                example-1: {}
+      parameters: []
       security:
         - accessToken: []
         - Client Id: []
@@ -130,6 +171,38 @@ paths:
                     type: string
                 required:
                   - accessToken
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Mismatch
+                    message: Pin does not match with membership id
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Missing ID
+                    message: The ID does not exist
       operationId: post-memberships-pin-verifications
       requestBody:
         content:
@@ -236,6 +309,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Transaction'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Missing ID
+                    message: The ID does not exist
       operationId: get-memberships-transactions
       description: 'Listing of all transactions belong to a membership account with the specified {membershipID}'
       security:
@@ -271,6 +360,22 @@ paths:
                     type: string
                   rejectedReason:
                     type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Missing ID
+                    message: The ID does not exist
       operationId: get-memberships-registrations-info
       description: Retrieve registration info.
       security:
@@ -396,6 +501,7 @@ paths:
                     type: string
                 required:
                   - message
+              examples: {}
         '403':
           description: Forbidden
           content:
@@ -413,6 +519,7 @@ paths:
       description: Request to generate new client-token
       security:
         - Client Id: []
+        - Secret Key: []
       requestBody:
         description: ''
         content:
@@ -448,6 +555,62 @@ paths:
             type: string
           in: query
           name: orderID
+          required: true
+  '/memberships/<membershipID:string>':
+    get:
+      summary: Get public membership info
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  phonNumber:
+                    type: string
+                  name:
+                    type: string
+                  email:
+                    type: string
+              examples:
+                sample:
+                  value:
+                    id: 81
+                    phoneNumber: '+85510657939'
+                    email: hoeurnghen17@kit.edu.kh
+                    name: Chan Dara
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    type: Missing ID
+                    message: The ID does not exist
+      operationId: 'get-memberships-membershipID:string'
+      description: Provide public info of membership wihout Access Token requirement.
+      security:
+        - Client Id: []
+        - Client Token: []
+      requestBody: {}
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: membershipID
+          description: membershipID
           required: true
 components:
   schemas:
@@ -545,6 +708,10 @@ components:
       type: apiKey
       in: header
       description: ''
+    Secret Key:
+      name: secret_key
+      type: apiKey
+      in: header
 tags:
   - name: developer
     description: API that will be used by developers/client app.
