@@ -411,37 +411,39 @@ paths:
                 properties:
                   '':
                     type: string
+            text/html:
+              schema:
+                type: object
+                properties: {}
+        '404':
+          description: Could not find the order
       operationId: get-payments-orders
       description: Retrieve order info from Odoo with an orderID.
       security:
         - Client Id: []
         - Client Token: []
         - accessToken: []
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: orderID
-          required: true
+      parameters: []
       requestBody:
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
-                paymentType:
+                purchaseId:
                   type: string
-                purchaseItems:
+                vendor:
                   type: string
             examples:
               example-1:
                 value:
-                  paymentType: one-time
-                  keyInfo: product_id
+                  purchaseId: PID XXXX
+                  location: Moringa Meal
               example-2:
                 value:
-                  paymentType: order
-                  keyInfo: order_id
+                  purchaseId: OID XXXX
+                  location: Moringa POS
+        description: 'Information embbed in QR code format: <purchaseId> <location>'
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
@@ -536,8 +538,8 @@ paths:
       responses:
         '200':
           description: OK
-        '201':
-          description: Created
+        '400':
+          description: Bad Request
       operationId: post-payments-pay
       security:
         - accessToken: []
@@ -550,7 +552,11 @@ paths:
           application/json:
             schema:
               type: object
-              properties: {}
+              properties:
+                purchaseId:
+                  type: string
+                total:
+                  type: string
       parameters:
         - schema:
             type: string
@@ -634,8 +640,9 @@ components:
       type: object
       x-tags:
         - developer
+      description: Order detail to be displayed to user before confirming purchase.
       properties:
-        id:
+        purchaseId:
           type: string
         vendor:
           type: string
@@ -651,11 +658,18 @@ components:
               imageUrl:
                 type: string
                 format: uri
-              id:
-                type: string
-        totalAmount:
+              qty:
+                type: number
+              discount:
+                type: number
+              subtotal:
+                type: number
+        totalNoVat:
           type: number
-      description: Order detail to be displayed to user before confirming purchase.
+        vat:
+          type: number
+        total:
+          type: number
     Transaction:
       title: Transaction
       type: object
