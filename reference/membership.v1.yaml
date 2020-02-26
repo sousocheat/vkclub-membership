@@ -650,9 +650,6 @@ components:
                 type: string
               unitPrice:
                 type: number
-              imageUrl:
-                type: string
-                format: uri
               qty:
                 type: number
               discount:
