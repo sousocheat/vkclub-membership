@@ -429,19 +429,8 @@ paths:
           multipart/form-data:
             schema:
               type: object
-              properties:
-                purchaseId:
-                  type: string
-            examples:
-              example-1:
-                value:
-                  purchaseId: PID XXXX
-                  location: Moringa Meal
-              example-2:
-                value:
-                  purchaseId: OID XXXX
-                  location: Moringa POS
-        description: 'Information embbed in QR code format: <purchaseId> <location>'
+            examples: {}
+        description: 'Information embbed in QR code format: <purchaseId>'
     parameters:
       - schema:
           type: string
