@@ -387,7 +387,7 @@ paths:
           in: query
           name: registrationID
           required: true
-  /payments/orders:
+  '/payments/orders/{purchaseId}':
     get:
       summary: Get order info with orderID.
       tags:
@@ -432,8 +432,6 @@ paths:
               properties:
                 purchaseId:
                   type: string
-                vendor:
-                  type: string
             examples:
               example-1:
                 value:
@@ -444,6 +442,12 @@ paths:
                   purchaseId: OID XXXX
                   location: Moringa POS
         description: 'Information embbed in QR code format: <purchaseId> <location>'
+    parameters:
+      - schema:
+          type: string
+        name: purchaseId
+        in: path
+        required: true
   /memberships/pin/reset:
     post:
       summary: Reset PIN.
@@ -557,13 +561,9 @@ paths:
                   type: string
                 total:
                   type: string
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: orderID
-          required: true
-  '/memberships/<membershipID:string>':
+      parameters: []
+    parameters: []
+  '/memberships/{membershipID}':
     get:
       summary: Get public membership info
       tags:
@@ -620,6 +620,12 @@ paths:
           name: membershipID
           description: membershipID
           required: true
+    parameters:
+      - schema:
+          type: string
+        name: membershipID
+        in: path
+        required: true
 components:
   schemas:
     MetaInfo:
